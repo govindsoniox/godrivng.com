@@ -1,0 +1,176 @@
+:root {
+  --ink: #14213d;
+  --accent: #f4a300;
+  --accent-dark: #c47f00;
+  --bg: #fbfaf7;
+  --card: #ffffff;
+  --muted: #5b6577;
+  --line: #e4e1d8;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a { color: var(--ink); }
+
+.wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header.site {
+  background: var(--ink);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header.site .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: .5px;
+  color: #fff;
+  text-decoration: none;
+}
+.brand span { color: var(--accent); }
+nav a {
+  color: #dfe4ee;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+nav a:hover, nav a[aria-current="page"] { color: var(--accent); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--ink) 0%, #26365f 100%);
+  color: #fff;
+  padding: 80px 0 90px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+.hero h1 em { color: var(--accent); font-style: normal; }
+.hero p { max-width: 560px; font-size: 1.15rem; color: #d6dcea; margin: 0 0 28px; }
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background .15s, transform .15s;
+}
+.btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+.btn.ghost {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.4);
+  margin-left: 10px;
+}
+.btn.ghost:hover { border-color: var(--accent); color: var(--accent); background: transparent; }
+
+/* Sections */
+section { padding: 64px 0; }
+section h2 { font-size: 1.8rem; margin: 0 0 8px; }
+.lead { color: var(--muted); margin: 0 0 32px; max-width: 620px; }
+
+.grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.card h3 { margin: 0 0 8px; font-size: 1.15rem; }
+.card p { margin: 0; color: var(--muted); }
+.card .num {
+  display: inline-grid;
+  place-items: center;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.band { background: #f1eee5; }
+
+.notice {
+  background: #fff6e0;
+  border-left: 4px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-top: 28px;
+}
+
+/* Contact */
+.contact-list { list-style: none; padding: 0; margin: 0; }
+.contact-list li { margin-bottom: 8px; }
+
+/* Terms page */
+.terms-head { background: var(--ink); color: #fff; padding: 48px 0; }
+.terms-head h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.4rem); }
+.terms-body { padding: 48px 0 72px; }
+.terms-body article {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 32px clamp(20px, 4vw, 44px);
+}
+.terms-body h2 {
+  font-size: 1.3rem;
+  margin: 34px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+.terms-body h2:first-child { margin-top: 0; }
+.terms-body ul { padding-left: 20px; }
+.terms-body li { margin-bottom: 10px; }
+
+/* Footer */
+footer.site {
+  background: var(--ink);
+  color: #b9c1d3;
+  padding: 28px 0;
+  font-size: .92rem;
+}
+footer.site a { color: #fff; }
+footer.site .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 560px) {
+  nav a { margin-left: 14px; }
+  .btn.ghost { margin: 12px 0 0; }
+}
