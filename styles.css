@@ -130,6 +130,16 @@ section h2 { font-size: 1.8rem; margin: 0 0 8px; }
   margin-top: 28px;
 }
 
+/* Booking form */
+.booking-frame {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  overflow: hidden;
+}
+.booking-frame iframe { display: block; border: 0; }
+
 /* Contact */
 .contact-list { list-style: none; padding: 0; margin: 0; }
 .contact-list li { margin-bottom: 8px; }
